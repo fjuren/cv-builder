@@ -7,21 +7,24 @@ import WorkExp from '../components/WorkExp';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="body">
         <div>
           <h2>Build your own CV</h2>
         </div>
 
         {/* UserContact section */}
+        <h3>Contact</h3>
         <UserContact />
-
+        
         {/* EducationExperience section */}
+        <h3>Education Experience</h3>
         <EducationExp />
 
         {/* WorkExperience section */}
+        <h3>Work Experience</h3>
         <WorkExp />
 
-      </header>
+      </div>
     </div>
   );
 }
