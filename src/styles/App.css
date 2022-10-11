@@ -23,6 +23,17 @@
   color: white;
 }
 
+.form > div {
+  display: grid;
+  grid-template-columns: 13rem auto;
+  text-align: left;
+  height: 3rem;
+  align-items: center;
+}
+
+.form > div > input {
+  height: 1.3rem
+}
 
 .App-link {
   color: #61dafb;
