@@ -13,9 +13,8 @@ class UserContact extends React.Component {
 
 
     handleChange = (event) => {
-        console.log(this.state.fname)
         this.setState({
-            fname: event.target.value
+            [event.target.id]: event.target.value
         }
         )   
     }
@@ -23,21 +22,23 @@ class UserContact extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({
-            // fname: ????
+            fname: this.state.fname,
+            lname: this.state.lname,
+            email: this.state.email,
+            phone: this.state.phone,
         })
         event.target.style.display = "none";
         this.showContent(document.getElementsByClassName("content"))
     }
+    
+    edit = (event) => {
+        event.preventDefault();
+        event.target.style.display = "none";
+        this.showContent(document.getElementsByClassName("form"))
+    }
 
     showContent = (i) => {
         i[0].style.display = "inline"
-        // console.log(i)
-    }
-
-    edit = (event) => {
-        event.preventDefault();
-        this.showContent(document.getElementsByClassName("form"))
-        event.target.style.display = "none";
     }
     
     render() 
@@ -45,26 +46,42 @@ class UserContact extends React.Component {
         return(
             <div>  
                 <form className="form" onSubmit={e => this.handleSubmit(e)}>
-                    <label htmlFor="firstname">First name:</label>
-                    <input type="text" name="firstname" onChange={e => this.handleChange(e)}></input>
+                    <div>
+                        <label htmlFor="firstname">First name: </label>
+                        <input type="text" name="firstname" id="fname" onChange={e => this.handleChange(e)}></input>
+                    </div>
+                    <div>
+                        <label htmlFor="lastname">Last name: </label>
+                        <input type="text" name="lastname" id="lname" onChange={e => this.handleChange(e)}></input>
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email: </label>
+                        <input type="email" name="email" id="email" onChange={e => this.handleChange(e)}></input>
+                    </div>
+                    <div>
+                        <label htmlFor="phone">Phone number: </label>
+                        <input type="tel" name="phone" id="phone" onChange={e => this.handleChange(e)}></input>
+                    </div>
 
-                    <label htmlFor="lastname">Last name:</label>
-                    <input type="text" name="lastname"></input>
-
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" name="email"></input>
-
-                    <label>Phone number (prefered):</label>
-                    <input type="tel"></input>
-
-                    <input type="submit" value="Add"></input>
+                    <input type="submit" value="Save"></input>
                 </form>
                 <form className="content" style={{display: "none"}} onSubmit={e => this.edit(e)}>
-                    <div>First name</div>
-                    <div>Last name</div>
-                    <div>Email</div>
-                    <div>Phone number</div>
-
+                    <div>
+                        <label>First name: </label>
+                        {this.state.fname}
+                    </div>
+                    <div>
+                        <label>Last name: </label>
+                        {this.state.lname}
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        {this.state.email}
+                    </div>
+                    <div>
+                        <label>Phone number: </label>
+                        {this.state.phone}
+                    </div>
                     <input type="submit" value="Edit"></input>
                 </form>
             </div>
