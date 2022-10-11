@@ -68,19 +68,19 @@ class UserContact extends React.Component {
                 <form className="content" style={{display: "none"}} onSubmit={e => this.edit(e)}>
                     <div>
                         <label>First name: </label>
-                        {this.state.fname}
+                        <span>{this.state.fname}</span>
                     </div>
                     <div>
                         <label>Last name: </label>
-                        {this.state.lname}
+                        <span>{this.state.lname}</span>
                     </div>
                     <div>
                         <label>Email: </label>
-                        {this.state.email}
+                        <span>{this.state.email}</span>
                     </div>
                     <div>
                         <label>Phone number: </label>
-                        {this.state.phone}
+                        <span>{this.state.phone}</span>
                     </div>
                     <input type="submit" value="Edit"></input>
                 </form>

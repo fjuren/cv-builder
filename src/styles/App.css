@@ -31,8 +31,24 @@
   align-items: center;
 }
 
+.form > div> label {
+  font-weight: bold;
+}
+
 .form > div > input {
   height: 1.3rem
+}
+
+.content> div {
+  display: grid;
+  grid-template-columns: 13rem auto;
+  text-align: left;
+  height: 3rem;
+  align-items: center;
+}
+
+.content > div > label{
+  font-weight: bold;
 }
 
 .App-link {
