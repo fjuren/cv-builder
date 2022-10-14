@@ -28,13 +28,13 @@ class UserContact extends React.Component {
             phone: this.state.phone,
         })
         event.target.style.display = "none";
-        this.showContent(document.getElementsByClassName("content"))
+        this.showContent(document.getElementsByClassName("contactContent"))
     }
     
     edit = (event) => {
         event.preventDefault();
         event.target.style.display = "none";
-        this.showContent(document.getElementsByClassName("form"))
+        this.showContent(document.getElementsByClassName("contactForm"))
     }
 
     showContent = (i) => {
@@ -45,7 +45,7 @@ class UserContact extends React.Component {
     {
         return(
             <div>  
-                <form className="form" onSubmit={e => this.handleSubmit(e)}>
+                <form className="contactForm" onSubmit={e => this.handleSubmit(e)}>
                     <div>
                         <label htmlFor="firstname">First name: </label>
                         <input type="text" name="firstname" id="fname" onChange={e => this.handleChange(e)}></input>
@@ -65,7 +65,7 @@ class UserContact extends React.Component {
 
                     <input type="submit" value="Save"></input>
                 </form>
-                <form className="content" style={{display: "none"}} onSubmit={e => this.edit(e)}>
+                <form className="contactContent" style={{display: "none"}} onSubmit={e => this.edit(e)}>
                     <div>
                         <label>First name: </label>
                         <span>{this.state.fname}</span>
