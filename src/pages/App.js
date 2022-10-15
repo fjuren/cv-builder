@@ -1,7 +1,9 @@
 import '../styles/App.css';
 
-import UserContact from '../components/UserContact';
+// import UserContact from '../components/UserContact';
 import EducationExp from '../components/EducationExp';
+// import EducationExpHooks from '../componentsHooks/EducationExpHooks';
+import UserContactHooks from '../componentsHooks/UserContactHooks';
 import WorkExp from '../components/WorkExp';
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
 
         {/* UserContact section */}
         <h3>Contact</h3>
-        <UserContact />
+        <UserContactHooks />
         
         {/* EducationExperience section */}
         <h3>Education Experience</h3>
