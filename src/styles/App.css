@@ -10,6 +10,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 5rem;
 }
 
 .contactForm > div {
@@ -52,7 +53,7 @@
   font-weight: bold;
 }
 
-.educationtForm > div > input {
+.educationForm > div > input {
   height: 1.3rem
 }
 
@@ -65,5 +66,33 @@
 }
 
 .educationContent > div > label{
+  font-weight: bold;
+}
+
+.workForm > div {
+  display: grid;
+  grid-template-columns: 16rem auto;
+  text-align: left;
+  height: 3rem;
+  align-items: center;
+}
+
+.workForm > div> label {
+  font-weight: bold;
+}
+
+.workForm > div > input {
+  height: 1.3rem
+}
+
+.workContent> div {
+  display: grid;
+  grid-template-columns: 16rem auto;
+  text-align: left;
+  height: 3rem;
+  align-items: center;
+}
+
+.workContent > div > label{
   font-weight: bold;
 }
