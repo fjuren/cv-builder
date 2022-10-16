@@ -1,10 +1,8 @@
 import '../styles/App.css';
 
-// import UserContact from '../components/UserContact';
-// import EducationExp from '../components/EducationExp';
 import EducationExpHooks from '../componentsHooks/EducationExpHooks';
 import UserContactHooks from '../componentsHooks/UserContactHooks';
-import WorkExp from '../components/WorkExp';
+import WorkExpHooks from '../componentsHooks/WorkExpHooks';
 
 function App() {
   return (
@@ -24,7 +22,7 @@ function App() {
 
         {/* WorkExperience section */}
         <h3>Work Experience</h3>
-        <WorkExp />
+        <WorkExpHooks />
 
       </div>
     </div>
